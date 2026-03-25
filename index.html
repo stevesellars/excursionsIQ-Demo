@@ -403,19 +403,38 @@ nav{
 }
 .epills.v{opacity:1}
 .pill{
-  background:rgba(168,85,247,.07);border:1px solid rgba(168,85,247,.18);
-  border-radius:100px;padding:10px 20px;font-size:14px;color:rgba(255,255,255,.65);
-  transition:all .25s;cursor:default;position:relative;overflow:hidden;
+  border-radius:100px;padding:11px 22px;font-size:14px;font-weight:600;
+  transition:all .3s;cursor:default;position:relative;overflow:hidden;
+  border:1px solid transparent;
 }
-.pill::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(0,255,224,.1));
-  opacity:0;transition:opacity .25s;
-}
+.pill::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;border-radius:100px}
 .pill:hover::before{opacity:1}
-.pill:hover{border-color:rgba(0,255,224,.3);color:var(--white);transform:translateY(-3px);
-  box-shadow:0 8px 24px rgba(0,255,224,.1);}
+.pill:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
 .pill span{position:relative;z-index:1}
+
+.pill-teal{background:rgba(0,255,224,.12);border-color:rgba(0,255,224,.4);color:var(--teal)}
+.pill-teal::before{background:rgba(0,255,224,.18)}
+.pill-teal:hover{box-shadow:0 12px 32px rgba(0,255,224,.25)}
+
+.pill-hot{background:rgba(6,255,165,.1);border-color:rgba(6,255,165,.4);color:var(--hot)}
+.pill-hot::before{background:rgba(6,255,165,.16)}
+.pill-hot:hover{box-shadow:0 12px 32px rgba(6,255,165,.25)}
+
+.pill-purple{background:rgba(168,85,247,.12);border-color:rgba(168,85,247,.45);color:var(--purple)}
+.pill-purple::before{background:rgba(168,85,247,.2)}
+.pill-purple:hover{box-shadow:0 12px 32px rgba(168,85,247,.3)}
+
+.pill-cyan{background:rgba(34,211,238,.1);border-color:rgba(34,211,238,.4);color:#22D3EE}
+.pill-cyan::before{background:rgba(34,211,238,.16)}
+.pill-cyan:hover{box-shadow:0 12px 32px rgba(34,211,238,.25)}
+
+.pill-violet{background:rgba(129,140,248,.1);border-color:rgba(129,140,248,.4);color:#818CF8}
+.pill-violet::before{background:rgba(129,140,248,.16)}
+.pill-violet:hover{box-shadow:0 12px 32px rgba(129,140,248,.25)}
+
+.pill-mint{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.4);color:#34D399}
+.pill-mint::before{background:rgba(52,211,153,.16)}
+.pill-mint:hover{box-shadow:0 12px 32px rgba(52,211,153,.25)}
 
 /* PROOF */
 .proof{padding:140px 60px;position:relative;overflow:hidden}
@@ -661,15 +680,15 @@ footer{
 <section class="evs">
   <div class="evs-glow"></div>
   <div class="ebdg"><div class="eico">&#10022;</div><span class="ebt">Introducing Eve</span></div>
-  <h2 class="eh">Meet your new <span>operations colleague</span>.<br>She already knows everything.</h2>
-  <p class="eb">Eve is not a chatbot. Eve is a colleague — and a colleague doesn't wait to be asked. She's already in your data, spotting problems before you do, flagging what needs attention, drafting your communications, building your workflows, and telling you how to do better. Every person on your team now has their own expert on everything.</p>
+  <h2 class="eh">Your <span>Digital Trusted Colleague</span>.<br>Always on. Always ahead.</h2>
+  <p class="eb">Eve is your Digital Trusted Colleague — the expert on every number, every relationship, and every opportunity across your entire operation. She watches your business around the clock, surfaces what needs your attention, recommends what to do next, and handles the communications and workflows that used to eat your day. Every person on your team now has their own senior expert at their side, every hour of every day.</p>
   <div class="epills">
-    <div class="pill"><span>Real-time capacity analysis</span></div>
-    <div class="pill"><span>Proactive revenue alerts</span></div>
-    <div class="pill"><span>Draft communications instantly</span></div>
-    <div class="pill"><span>Build &amp; activate workflows</span></div>
-    <div class="pill"><span>Broker network intelligence</span></div>
-    <div class="pill"><span>Knows every number in your system</span></div>
+    <div class="pill pill-teal"><span>Real-time capacity visibility</span></div>
+    <div class="pill pill-hot"><span>Proactive revenue alerts</span></div>
+    <div class="pill pill-purple"><span>Draft communications instantly</span></div>
+    <div class="pill pill-cyan"><span>Build &amp; activate workflows</span></div>
+    <div class="pill pill-violet"><span>Broker network intelligence</span></div>
+    <div class="pill pill-mint"><span>Expert on every number you manage</span></div>
   </div>
 </section>
 
@@ -726,14 +745,12 @@ footer{
   <div class="fl">
     <div class="fb"><span class="le" style="font-family:var(--fm);font-style:italic;font-size:16px">E</span><span style="font-family:var(--fm);font-style:italic;font-size:13px;color:#7B8CDE">i</span><span class="le" style="font-family:var(--fm);font-style:italic;font-size:16px">Q</span> <span style="background:linear-gradient(90deg,var(--teal),var(--hot));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Excursion<b>IQ</b></span></div>
     <div class="ft">
-      
-      <!-- <a href="https://selernagroup.com" target="_blank" rel="noopener" style="color:var(--slate);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--slate)'">Selerna Group</a>
+      <a href="https://selernagroup.com" target="_blank" rel="noopener" style="color:var(--slate);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--slate)'">Selerna Group</a>
       <span style="color:rgba(255,255,255,.2);margin:0 8px">/</span>
-      <a href="https://accesscruiseinc.com" target="_blank" rel="noopener" style="color:var(--slate);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--slate)'">Access Cruise</a> -->
-      
+      <a href="https://accesscruiseinc.com" target="_blank" rel="noopener" style="color:var(--slate);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--slate)'">Access Cruise</a>
     </div>
   </div>
-  <div class="fr">&#169; 2026 ExcursionsIQ. All rights reserved.</div>
+  <div class="fr">&#169; 2026 Selerna Group. All rights reserved.</div>
 </footer>
 
 <script>
@@ -865,7 +882,11 @@ function setRole(r){
 }
 
 // FORM
-function submitForm(){
+// FORM — powered by Formspree (replace YOUR_FORM_ID with your Formspree endpoint)
+// Sign up free at formspree.io → New Form → copy the form ID
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+async function submitForm(){
   const ids=['fn','ln','co','em'];let ok=true;
   ids.forEach(id=>{
     const el=document.getElementById(id);
@@ -877,9 +898,40 @@ function submitForm(){
     }
   });
   if(!ok)return;
-  const fc=document.getElementById('fcont');
-  fc.style.transition='opacity .3s';fc.style.opacity='0';
-  setTimeout(()=>{fc.style.display='none';document.getElementById('sst').style.display='block'},320);
+
+  const btn=document.querySelector('.sbtn');
+  btn.textContent='Sending...';btn.style.opacity='.7';btn.style.pointerEvents='none';
+
+  const payload={
+    firstName: document.getElementById('fn').value.trim(),
+    lastName:  document.getElementById('ln').value.trim(),
+    company:   document.getElementById('co').value.trim(),
+    role:      role==='op'?'Shore Excursion Operator':role==='br'?'Cruise Broker':'Large Operator / Integration',
+    email:     document.getElementById('em').value.trim(),
+    phone:     document.getElementById('ph').value.trim()||'Not provided',
+    _subject:  'New Demo Request — ExcursionsIQ'
+  };
+
+  try{
+    const res=await fetch(FORMSPREE_ENDPOINT,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    if(res.ok){
+      const fc=document.getElementById('fcont');
+      fc.style.transition='opacity .3s';fc.style.opacity='0';
+      setTimeout(()=>{fc.style.display='none';document.getElementById('sst').style.display='block'},320);
+    } else {
+      btn.textContent='Something went wrong — please try again';
+      btn.style.background='rgba(239,68,68,.8)';
+      btn.style.opacity='1';btn.style.pointerEvents='auto';
+    }
+  } catch(e){
+    btn.textContent='Connection error — please try again';
+    btn.style.background='rgba(239,68,68,.8)';
+    btn.style.opacity='1';btn.style.pointerEvents='auto';
+  }
 }
 </script>
 </body>
